@@ -6,7 +6,9 @@ import { postUser } from "../redux/slices/authSlice";
 const SignUp = () => {
   const dispatch = useDispatch();
 
-  const onSubmit = (values) => {
+  const onSubmit = (e, values) => {
+    console.log(values);
+    e.preventDefault();
     dispatch(postUser(values));
   };
 
